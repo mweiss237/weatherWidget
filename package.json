@@ -1,0 +1,28 @@
+{
+  "name": "weatherwidget",
+  "version": "1.0.0",
+  "description": "Displaying weather from OpenWeatherMap",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mweiss237/weatherWidget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mweiss237/weatherWidget/issues"
+  },
+  "homepage": "https://github.com/mweiss237/weatherWidget#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/vue": "^2.0.0",
+    "request": "^2.88.0"
+  },
+  "dependencies": {}
+}

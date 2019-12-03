@@ -1,0 +1,41 @@
+{
+    "coord": {
+        "lon": 10.78,
+        "lat": 48.72
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": -1.72,
+        "pressure": 1028,
+        "humidity": 86,
+        "temp_min": -4,
+        "temp_max": 1
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 0.5
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1575353593,
+    "sys": {
+        "type": 1,
+        "id": 1308,
+        "country": "DE",
+        "sunrise": 1575355833,
+        "sunset": 1575386573
+    },
+    "timezone": 3600,
+    "id": 2936260,
+    "name": "Donauwörth",
+    "cod": 200
+}
