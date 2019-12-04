@@ -9,8 +9,9 @@ class WeatherGadget {
     settings = null
     weatherData = null
     url = 'https://api.openweathermap.org/data/2.5/weather?'
-    constructor(apiKey, city, metrics) {
+    constructor(app, apiKey, city, metrics) {
         this.setCallSettings(apiKey, city, metrics, this.url)
+        this.app = app
     }
 
     setCallSettings(apiKey, city, metrics, baseURL = this.url) {
@@ -21,6 +22,7 @@ class WeatherGadget {
         if (!this.settings) return false
         request.get(this.settings.getURL(), (err, res, body) => {
             this.weatherData = new WeatherData(JSON.parse(body))
+            this.showWeatherGadget()
             this.logWeather()
         })
         return true
@@ -32,6 +34,15 @@ class WeatherGadget {
         return key ? wd[key] : wd
     }
 
+    showWeatherGadget() {
+        this.app.get('/', (req, res) => {
+            var wd = this.getWeatherData()
+            res.send(`Weather in ${wd.city} <br>
+                    Temperature: ${wd.temp.act} <br>
+                    Today - Max  ${wd.temp.max} °C / Min ${wd.temp.min}°C <br>
+                    Wind: ${wd.wind}`)
+        })
+    }
 
     logWeather() {
         let wd = this.getWeatherData()

@@ -2,6 +2,7 @@
 class WeatherData {
 
     constructor(raw) {
+        console.log(JSON.stringify(raw))
         this.data = {
             city: raw.name,
             clouds: raw.clouds.all,
